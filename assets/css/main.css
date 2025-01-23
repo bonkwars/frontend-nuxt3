@@ -1,0 +1,71 @@
+/* assets/css/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Base styles */
+  html {
+    @apply antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-gray-900 text-white min-h-screen;
+  }
+
+  /* Form elements */
+  input, textarea {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  button {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Custom components */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white;
+  }
+
+  .card {
+    @apply bg-gray-800 rounded-xl shadow-lg p-6;
+  }
+
+  .input-group {
+    @apply space-y-2;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-gray-300;
+  }
+
+  .input-error {
+    @apply text-sm text-red-500 mt-1;
+  }
+}
+
+@layer utilities {
+  /* Custom utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-degen-primary to-degen-secondary;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-degen-primary/10 to-degen-secondary/10;
+  }
+
+  .glassmorphism {
+    @apply bg-gray-800/50 backdrop-blur-xl border border-gray-700/50;
+  }
+}
